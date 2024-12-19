@@ -1,0 +1,197 @@
+/* Main container for the Inhouse1 component */
+.inhouse-facility-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light grey background */
+  font-family: Arial, sans-serif;
+  color: black;
+}
+/* Uppercase for all headings and bold text */
+h1, h2, h3, h4, b {
+  text-transform: uppercase;
+}
+
+/* Header Section with top center alignment */
+.inhouse-header {
+  text-align: center;
+  margin-bottom: 10px; /* Reduced margin for less space below the heading */
+  background-color:#0f5286;
+  margin-top: -10px;
+  border-radius: 10px;
+   padding: 30px;
+   animation: slideDownEffect 1s ease-in-out;
+ 
+}
+@keyframes slideDownEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Start slightly above the viewport */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position in its natural place */
+  }
+}
+.inhouse-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  
+}
+.inhouse-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  
+}
+
+
+/* Image and paragraph section in a row with minimal gap */
+.inhouse-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 60px; /* Further reduced gap between image and text */
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.inhouse-image img {
+  max-width: 700px; 
+  width: 100%;
+  border-radius: 10px;
+ 
+  margin: 20px;
+  transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Zoom-In and Out Effect on Hover */
+.inhouse-image img:hover {
+  transform: scale(1.2); /* Zoom-in effect */
+  
+}
+
+.inhouse-paragrph {
+  flex: 1;
+  max-width: 700px;
+  padding: 30px; 
+  font-size: 16px;
+  line-height: 1.6;
+ margin: 20px;
+}
+
+/* Content Section */
+.inhouse-content {
+  background-color: #fdfdfd;
+  border: 2px solid#ff782b; 
+  border-radius: 8px;
+  padding: 40px; 
+ 
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: transform 0.9s ease, box-shadow 0.5s ease;
+  margin-left: 30px;
+  
+}
+
+.inhouse-content:hover {
+  transform: translateY(-50px); /* Lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+ .inhouse-content h3 {
+  color:#ff782b;
+}
+
+.inhouse-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.inhouse-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px; 
+  color: black;
+  font-weight: bold;
+}
+.inhouse-content h4 {
+  font-size: 18px;
+ padding-top: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.inhouse-content p {
+  font-size: 16px; 
+  line-height: 1.6; 
+  color: black;
+  padding: 5px;
+  margin-bottom: 10px; 
+}
+.inhouse-content p b{
+  color: #ff782b;
+ 
+}
+.inhouse-content ul {
+  list-style-type: disc;
+  padding-left: 16px;
+  margin-bottom: 10px; /* Reduced space below lists */
+}
+
+.inhouse-content ul li {
+  margin-bottom: 8px; /* Reduced space between list items */
+}
+
+.inhouse-content ul li b {
+  color: #ff782b; /* Highlighted text in orange */
+  font-weight: bold;
+}
+.inhouse-container,
+.inhouse-content {
+  overflow: hidden; /* Avoid clipping animations */
+}
+
+.inhouse-image img {
+  transition: transform 0.5s ease-in-out; /* Smooth image movement */
+}
+
+.inhouse-paragraph {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inhouse-container {
+    flex-direction: column;
+    gap: 10px; /* Adjusted gap for mobile */
+  }
+
+  .facility-image img {
+    max-width: 100%; /* Image takes full width on smaller screens */
+  }
+
+  .inhouse-paragrph {
+    max-width: 100%; /* Text takes full width on smaller screens */
+    text-align: center;
+  }
+
+  .inhouse-header h1 {
+    font-size: 2rem; /* Adjusted heading size for mobile */
+  }
+
+  .inhouse-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .inhouse-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* for Animations */
